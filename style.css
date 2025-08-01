@@ -1,0 +1,249 @@
+@font-face{
+  font-family:' DMSans';
+  src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf')
+  format(truetype);
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  box-sizing: border-box;
+}
+:root{
+  --purple1 : hsl(254, 88%, 90%);
+  --purple2 : hsl(256, 67%, 59%);
+
+  --Yellow1 : hsl(31, 66%, 93%);
+  --Yellow2 : hsl(39, 100%, 71%);
+
+  --White : hsl(0, 0%, 100%);
+  --Black : hsl(0, 0%, 7%);
+
+  --font-size-large : 40px;
+  --font-size-medium : 25px;
+  --font-size-small : 15px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+.grid-container{
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 20px;
+  grid-template-areas:
+    "item7 item1 item1 item4" 
+    "item7 item1 item1 item4" 
+    "item7 item1 item1 item4" 
+    "item7 item1 item1 item4" 
+    "item7 item2 item3 item4" 
+    "item8 item2 item3 item4" 
+    "item8 item2 item3 item4" 
+    "item8 item6 item5 item5" 
+    "item8 item6 item5 item5" 
+    "item8 item6 item5 item5";
+    max-width: 1000px;
+    max-height: 800px;
+    width: 90%;
+    margin: 3rem auto;
+}
+.grid-item{
+  border-radius: 0.3rem;
+  overflow: hidden;
+  background-color: white;
+  color: black;
+  font-size: var(--font-size-medium);
+  line-height: 0.9;
+  letter-spacing: -0.5px;
+}
+
+.item1{
+  background-color: var(--purple2);
+  color: var(--White);
+  text-align: center;
+  font-size: 46px;
+  grid-area: item1;
+  padding: 0.7rem;
+}
+.item1 img{
+  padding: 0.1rem 0.1rem 0 0.1rem;
+}
+.item1 p{
+  padding: 0;
+  margin: 2rem 0 1rem 0;
+  font-family:'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.item2{
+  background-color: var(--White);
+  grid-area: item2;
+  padding: 1rem;
+}
+.item2 img{
+  padding: 0.1rem 0 1rem 2rem;
+}
+.item2 span{
+  padding: 0.1rem 0.1rem 0.1rem 0.1rem;
+}
+
+.item3{
+  background-color: var(--Yellow2);
+  grid-area: item3;
+  padding: 1.5rem 1rem 0 1rem;
+}
+.item3 img{
+  padding: 2.5rem 0.1rem 0 0.1rem;
+}
+
+.item4{
+  background-color: var(--purple1);
+  color: var(--Black);
+  grid-area: item4;
+  padding: 2rem 0 3rem 2rem;
+}
+
+.item5{
+  background-color: var(--purple2);
+  color: var(--White);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: item5;
+}
+
+.item6{
+  background-color: var(--White);
+  grid-area: item6;
+  padding: 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,;
+  font-size: 40px;
+}
+.item6 span{
+  padding: 1rem 0.1rem 1rem 0.1rem;
+}
+
+.item7{
+  background-color: var(--Yellow1);
+  grid-area: item7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: left;
+  gap: 0.6rem;
+}
+.item7 p{
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-medium);
+  color: var(--Black);
+}
+.item7 .btn-container{
+  margin-top: 1rem;
+}
+.item7 .btn-image{
+  width: auto;
+  max-width: 160px;
+}
+
+.item8{
+  background-color: var(--Yellow2);
+  grid-area: item8;
+  padding: 1rem;
+}
+.item8 img{
+  padding: 1rem 0 0 0 0;
+}
+.yellow{
+  color: var(--Yellow2);
+}
+.purple{
+  color: var(--purple2);
+  font-family: 'DMSans';
+  font-style: italic;
+}
+.smallFont{
+  font-size: var(--font-size-small);
+  color: white;
+  font-weight: normal;
+  display: block;
+  margin-top: 0.5rem;
+}
+.smallFont2{
+  font-size: 15px;
+  color: black;
+  display: block;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0.5rem;
+}
+.italic{
+  font-style: italic;
+}
+
+@media (max-width: 800px) {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 100%;
+    max-height: none;
+    width: 90%;
+    margin: 1rem 1rem;
+  }
+  .grid-item{
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    font-weight: 400;
+  }
+  .grid-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .item3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .item3 img{
+    padding: 1rem;
+    max-width: 100%;
+    height: auto;
+  }
+  .item7 p{
+    padding: 0.5rem;
+    font-size: var(--font-size-large);
+  }
+  .item8 p{
+    padding: 0.5rem;
+  }
+  .item5 img{
+    padding: 0.5rem;
+
+  }
+  item4 p{
+    padding: 1rem;
+  }
+  br{
+    display: none;
+  }
+  
+}
